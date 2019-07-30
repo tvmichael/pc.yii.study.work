@@ -65,14 +65,21 @@ class SiteController extends Controller
     /**
      * Displays homepage.
      *
-     * $cE - current exchange
-     * $cC - current currency
+     * @return string
+     */
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
+
+    /**
+     * Displays Map.
      *
      * @return string
      */
-    public function actionIndex($cE = '1', $cC = null)
+    public function actionMap($map='')
     {
-        return $this->render('index');
+        return $this->render('/map/'.$map);
     }
 
     /**
